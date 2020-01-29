@@ -21,7 +21,7 @@ search.send_keys('Cancel Items or Orders')
 driver.find_element(By.XPATH, "//span[@id='helpSearchSubmit']//input[@type='submit']").click()
 
 # verify
-assert 'Cancel Items or Orders' in driver.find_element(By.NAME, "//div[@class='help-content']//h1").text
+assert 'Cancel Items or Orders' in driver.find_element(By.XPATH, "//div[@class='help-content']//h1").text
 
 driver.quit()
 
