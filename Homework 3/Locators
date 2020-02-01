@@ -1,0 +1,11 @@
+1. Amazon logo: $$(".a-icon-logo")
+2. Create account: 1. $x("//div[@id='authportal-main-section']//div[@class='a-box-inner']//h1"),  2. $$('h1')
+3. Your name: $x("//input[@id='ap_customer_name']")
+4. Email: $x("//input[@id='ap_email']")
+5. Password: $x("//input[@id='ap_password']")
+6. Re-enter: $x("//input[@id='ap_password_check']")
+7. Create your amazon account button: $x("//input[@id='continue']")
+8. Conditions of use: $x("//div[@id='legalTextRow']//a[text()='Conditions of Use']")
+9. Privacy notice: $x("//div[@id='legalTextRow']//a[text()='Privacy Notice']")
+10. Sign - In: $x("//div[@id='authportal-main-section']//a[@class='a-link-emphasis']")
+

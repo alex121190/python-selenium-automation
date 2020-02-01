@@ -12,3 +12,12 @@ def even_or_odd(number):
     return "Even"
   else:
     return "Odd"
+
+def pre_fizz(n):
+  return list(range(1, n+1))
+print(pre_fizz(5))
+
+
+
+
+
