@@ -5,4 +5,4 @@ Feature: Shopping cart is empty
   Scenario: User can check if shopping cart is empty
     Given Open Amazon page
     Then Click the cart icon
-    Then Check that Your Shopping Cart is empty
+    Then Check that Your shopping cart is empty

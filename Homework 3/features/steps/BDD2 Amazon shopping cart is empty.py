@@ -18,5 +18,5 @@ def click_icon(context):
 
 @then('Check that {search_text}')
 def check_cart(context, search_text):
-    assert 'Your Shopping Cart is empty' in context.driver.find_element(*EMPTY_CART).text
+    assert 'Your shopping cart is empty' in context.driver.find_element(*EMPTY_CART).text
 
