@@ -5,7 +5,7 @@ digits = int(input("Введите разрядность числа "))
 
 def sum_digits(digits):
     if digits < 1:
-        print("Неверное значение, надо больше 1")
+        return "Неверное значение, надо больше 1"
     else:
         down = 1 * 10 ** (digits - 1)
         up = (1 * 10 ** digits) - 1
@@ -18,4 +18,6 @@ def sum_digits(digits):
             n = n // 10
             i += 1
 
-    return result
+        return result
+
+print(sum_digits(digits))
