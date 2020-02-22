@@ -5,9 +5,9 @@ from time import sleep
 SEARCH_INPUT_LOCATOR = (By.ID, "twotabsearchtextbox")
 SEARCH_BUTTON_LOCATOR = (By.XPATH, "//div[@id='nav-search']//input[@type='submit']")
 # BOOKS_LOCATOR = (By.CSS_SELECTOR, ".s-result-item")
-BOOKS_LOCATOR = (By.XPATH, "//a[@class='a-link-normal']//div[@class='a-section aok-relative s-image-fixed-height']")
-# LAST_BOOK_LOCATOR = (By.XPATH, "//a[@class='a-link-normal']//div[@class='a-section aok-relative s-image-fixed-height']")
-# LAST_BOOK_PRICE_TAG = ()
+BOOKS_LOCATOR = (By.CSS_SELECTOR, '.s-result-list.s-search-results > div[data-index]')
+TITLE_LOCATOR = (By.CSS_SELECTOR, 'h2 a')
+# # LAST_BOOK_PRICE_TAG = ()
 
 @given('Open main Amazon page')
 def open_amazon(context):
@@ -31,12 +31,15 @@ def button(context):
 def count(context):
     books = context.driver.find_elements(*BOOKS_LOCATOR)
     print(len(books))
+    sleep(5)
 
-# @when('Find the last book')
-# def last_book(context):
-#     last_book = context.driver.find_element(*LAST_BOOK_LOCATOR)
-#
-# @then('Check if the price more that 10$ - add it to cart')
-# def price_tag(context):
-#     price_tag = context.driver.find_element(*LAST_BOOK_PRICE_TAG)
-#
+@when('Find the last book')
+def last_book(context):
+    last_book = context.driver.find_elements(*BOOKS_LOCATOR)[-1]
+    open_book = last_book.find_element(*TITLE_LOCATOR).click()
+
+# #
+# # @then('Check if the price more that 10$ - add it to cart')
+# # def price_tag(context):
+# #     price_tag = context.driver.find_element(*LAST_BOOK_PRICE_TAG)
+# #
