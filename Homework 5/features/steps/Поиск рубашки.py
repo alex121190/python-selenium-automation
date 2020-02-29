@@ -48,4 +48,8 @@ def needed_color(context, need_color):
         if need_color in shirt_color.get_attribute('title'):
             shirt_color.click()
             sleep(3)
-            add_to_cart = context.driver.find_element(*ADD_TO_CART).click()
+            print('234324')
+            add_to_cart = context.driver.find_element(*ADD_TO_CART)
+            add_to_cart.click()
+            break
+            print('456456')
